@@ -83,7 +83,7 @@ function Countdown() {
         color: 'rgba(255,255,255,0.6)',
         marginBottom: '12px',
       }}>
-        Until we set sail
+        Until the adventure begins
       </div>
       <div style={{
         display: 'flex',
@@ -492,7 +492,7 @@ export default function Home({ onNavigate }) {
         color: 'rgba(255,255,255,0.55)',
         marginBottom: '8px',
       }}>
-        Norwegian Gem · September 2026
+        Family Trip · September 2026
       </div>
       <h1 style={{
         fontFamily: 'var(--font-display)',
