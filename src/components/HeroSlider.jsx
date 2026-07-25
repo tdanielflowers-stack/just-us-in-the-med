@@ -60,34 +60,42 @@ export default function HeroSlider({ children }) {
         zIndex: 1,
       }} />
 
-      {/* Slide label — bottom left */}
-      <div style={{
-        position: 'absolute',
-        bottom: '140px',
-        left: '24px',
-        zIndex: 2,
-        transition: 'opacity 0.6s ease',
-      }}>
-        <div style={{
-          fontSize: '11px',
-          fontWeight: '600',
-          letterSpacing: '0.14em',
-          textTransform: 'uppercase',
-          color: 'rgba(255,255,255,0.6)',
-          marginBottom: '2px',
-        }}>
-          {heroSlides[current].sublabel}
-        </div>
-        <div style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(22px, 5vw, 30px)',
-          color: '#FFFFFF',
-          fontStyle: 'italic',
-          fontWeight: '400',
-        }}>
-          {heroSlides[current].label}
-        </div>
-      </div>
+      {/* Slide label — top left on mobile, bottom left on desktop */}
+<div style={{
+  position: 'absolute',
+  top: 'env(safe-area-inset-top, 16px)',
+  left: '16px',
+  zIndex: 2,
+  marginTop: '16px',
+}}>
+  <div style={{
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '6px',
+    background: 'rgba(10,22,40,0.45)',
+    backdropFilter: 'blur(8px)',
+    border: '1px solid rgba(255,255,255,0.15)',
+    borderRadius: '20px',
+    padding: '5px 12px',
+  }}>
+    <span style={{
+      fontSize: '10px',
+      color: 'rgba(255,255,255,0.5)',
+      letterSpacing: '0.06em',
+      textTransform: 'uppercase',
+      fontWeight: '500',
+    }}>
+      📍
+    </span>
+    <span style={{
+      fontSize: '11px',
+      color: 'rgba(255,255,255,0.85)',
+      fontWeight: '500',
+    }}>
+      {heroSlides[current].sublabel}
+    </span>
+  </div>
+</div>
 
       {/* Dot indicators */}
       <div style={{

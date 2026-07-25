@@ -404,9 +404,9 @@ function QuickStats() {
 // ── Upcoming Ports Strip ─────────────────────────────────────
 function UpcomingPorts({ onExplore }) {
   const now = new Date();
-  const upcoming = ports.filter(p => new Date(p.isoDate) >= now).slice(0, 4);
+  const upcoming = ports;
 
-  if (upcoming.length === 0) return null;
+  
 
   return (
     <div style={{ padding: '0 20px' }}>
@@ -475,50 +475,50 @@ export default function Home({ onNavigate }) {
     <div>
       {/* Hero */}
       <HeroSlider>
-        <div style={{
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          padding: '0 24px 100px',
-        }}>
-          {/* Title block */}
-          <div style={{ marginBottom: '28px', textAlign: 'center' }}>
-            <div style={{
-              fontSize: '11px',
-              fontWeight: '600',
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.55)',
-              marginBottom: '8px',
-            }}>
-              Norwegian Gem · September 2026
-            </div>
-            <h1 style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(38px, 10vw, 64px)',
-              fontWeight: '400',
-              color: '#FFFFFF',
-              lineHeight: 1.05,
-              letterSpacing: '-0.01em',
-              marginBottom: '6px',
-            }}>
-              Just Us<br />
-              <em style={{ color: 'var(--gold-light)' }}>in the Med</em>
-            </h1>
-            <div style={{
-              fontSize: '14px',
-              color: 'rgba(255,255,255,0.55)',
-              fontStyle: 'italic',
-            }}>
-              The whole crew. The Mediterranean. A lot of gelato.
-            </div>
-          </div>
+  <div style={{
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    padding: '0 24px 100px',
+  }}>
+    {/* Title block */}
+    <div style={{ marginBottom: '28px', textAlign: 'center' }}>
+      <div style={{
+        fontSize: '11px',
+        fontWeight: '600',
+        letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: 'rgba(255,255,255,0.55)',
+        marginBottom: '8px',
+      }}>
+        Norwegian Gem · September 2026
+      </div>
+      <h1 style={{
+        fontFamily: 'var(--font-display)',
+        fontSize: 'clamp(38px, 10vw, 64px)',
+        fontWeight: '400',
+        color: '#FFFFFF',
+        lineHeight: 1.05,
+        letterSpacing: '-0.01em',
+        marginBottom: '6px',
+      }}>
+        Just Us<br />
+        <em style={{ color: 'var(--gold-light)' }}>in the Med</em>
+      </h1>
+      <div style={{
+        fontSize: '14px',
+        color: 'rgba(255,255,255,0.55)',
+        fontStyle: 'italic',
+      }}>
+        The whole crew. The Mediterranean. A lot of gelato.
+      </div>
+    </div>
 
-          {/* Countdown */}
-          <Countdown />
-        </div>
-      </HeroSlider>
+    {/* Countdown */}
+    <Countdown />
+  </div>
+</HeroSlider>
 
       {/* Page content */}
       <div style={{ paddingTop: '28px', display: 'flex', flexDirection: 'column', gap: '28px', paddingBottom: '100px' }}>

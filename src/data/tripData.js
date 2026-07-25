@@ -53,7 +53,7 @@ export const travelGroups = [
         from: "RDU", to: "FRA",
         departs: "Thu Sep 3, 3:40 PM",
         arrives: "Fri Sep 4, 5:55 AM CEST",
-        note: "Check in at the Lufthansa ticket counter at RDU",
+        note: "Check in at the United ticket counter at RDU",
       },
       {
         type: "flight",
@@ -636,7 +636,7 @@ export const needToKnow = [
 • Your bags are checked through to Rome (FCO) — you don't collect them in Frankfurt.
 • At Rome FCO, you clear Italian/EU customs. Have passports ready. Use the "Non-EU Citizens" lane.
 
-Pro tip: Download the Lufthansa app and turn on notifications before you fly — it'll show your gate assignment in real time.`,
+Pro tip: Download the United app and turn on notifications before you fly — it'll show your gate assignment in real time.`,
   },
   {
     icon: "📱",
