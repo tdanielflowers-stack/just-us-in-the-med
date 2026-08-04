@@ -4,7 +4,7 @@ const tabs = [
   { id: 'home',      label: 'Home',    emoji: '🏝️' },
   { id: 'voyage',    label: 'Voyage',  emoji: '🛳️' },
   { id: 'travel',    label: 'Travel',  emoji: '✈️' },
-  { id: 'explore',   label: 'Explore', emoji: '📍' },
+  { id: 'explore',   label: 'Plans', emoji: '📍' },
   { id: 'needtoknow',label: 'Know',    emoji: '❓' },
 ];
 

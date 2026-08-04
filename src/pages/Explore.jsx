@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ports } from '../data/tripData';
+import { ports, portRules } from '../data/tripData';
 
 const tagClassMap = {
   'Active':        'tag-active',
@@ -314,9 +314,81 @@ function PortDetail({ port, onBack }) {
             ))}
           </div>
 
+          {/* Joannie's Shopping Tips */}
+          {port.shoppingTip && (
+            <div style={{ marginBottom: '16px' }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                marginBottom: '10px',
+              }}>
+                <div style={{
+                  fontSize: '11px',
+                  fontWeight: '600',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--text-tertiary)',
+                }}>
+                  Joannie's Shopping Tips
+                </div>
+                <div style={{
+                  fontSize: '14px',
+                }}>
+                  🛍
+                </div>
+              </div>
+              <div style={{
+                padding: '12px 14px',
+                background: 'linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.04))',
+                border: '1px solid rgba(212,168,67,0.25)',
+                borderRadius: '10px',
+                fontSize: '13px',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.6,
+              }}>
+                {port.shoppingTip}
+              </div>
+            </div>
+          )}
+
+          {/* Port Rules */}
+          <div style={{ marginBottom: '16px' }}>
+            <div style={{
+              fontSize: '11px',
+              fontWeight: '600',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--text-tertiary)',
+              marginBottom: '10px',
+            }}>
+              Standing rules — every port
+            </div>
+            {portRules.map((rule, i) => (
+              <div key={i} style={{
+                display: 'flex',
+                gap: '10px',
+                padding: '12px 14px',
+                background: i === 0
+                  ? 'linear-gradient(135deg, rgba(196,98,45,0.08), rgba(196,98,45,0.04))'
+                  : 'var(--bg-overlay)',
+                border: i === 0
+                  ? '1px solid rgba(196,98,45,0.2)'
+                  : '1px solid var(--border)',
+                borderRadius: '10px',
+                marginBottom: '8px',
+                fontSize: '13px',
+                color: 'var(--text-secondary)',
+                lineHeight: 1.6,
+              }}>
+                {rule}
+              </div>
+            ))}
+          </div>
+
           {/* Tip */}
           <div className="tip-box" style={{ marginBottom: '32px' }}>
-            <div className="tip-box-label">Tip for the group</div>
+            <div className="tip-box-label">Daniel & Becca's tip for the group</div>
             <div className="tip-box-text">{port.tip}</div>
           </div>
 
